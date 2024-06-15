@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Chess</title>
+</head>
+<link rel="stylesheet" href="./Chess.css">
+
+<body>
+    <h1>Welcome to chess</h1>
+    <div class="chess"></div>
+
+    <script>
+        var table = document.createElement('table');
+        for (let i = 0; i < 9; i++) {
+            var tr = document.createElement("tr");
+            for (let j = 0; j < 9; j++) {
+                var td = document.createElement("td");
+                if (i % 2 == j % 2) {
+                    td.className = "white";
+                } else {
+                    td.className = "black";
+                }
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        document.querySelector(".chess").appendChild(table);
+
+
+    </script>
+</body>
+
+</html>
